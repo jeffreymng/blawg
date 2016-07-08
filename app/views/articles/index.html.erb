@@ -1,5 +1,13 @@
-<h1>Listing articles</h1>
-  <%= link_to 'New article', new_article_path %>
+<h1 class="center">All Articles</h1>
+  <div class="center"><%= link_to 'New article', new_article_path %></div><br>
+
+  <!-- <ul class="center"> -->
+    <% @articles.each do |article | %>
+      <div class="center"><%= link_to article.title, article_path(article) %></div><br>
+    <% end %>
+  <!-- </ul> -->
+
+
   <table>
     <tr>
       <th>Title</th>
