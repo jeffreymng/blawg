@@ -3,26 +3,13 @@
 
   <!-- <ul class="center"> -->
     <% @articles.each do |article | %>
-      <div class="center"><%= link_to article.title, article_path(article) %></div><br>
+      <div class="center">
+        <h3><%= link_to article.title, article_path(article) %></h3>
+          <p class="">Created on <%= article.created_at %>
+          <p class="article-text"><%= article.text %></p>
+          <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </div><br>
     <% end %>
   <!-- </ul> -->
-
-
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-    </tr>
-
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </table>
