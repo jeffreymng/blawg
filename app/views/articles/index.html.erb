@@ -3,10 +3,10 @@
 
   <!-- <ul class="center"> -->
     <% @articles.each do |article | %>
-      <div class="center">
+      <div class="center blog-post">
         <h3><%= link_to article.title, article_path(article) %></h3>
           <p class="">Created on <%= article.created_at %>
-          <p class="article-text"><%= article.text %></p>
+          <p class=""><%= article.text %></p>
           <%= link_to 'Edit', edit_article_path(article) %> <%= link_to 'Delete', article_path(article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
