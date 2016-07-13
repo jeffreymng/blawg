@@ -1,5 +1,5 @@
-<h1 class="center">Muh Blawg</h1>
-<h2 id="myself" class="center"><small>Jeffrey, by Jeffrey Ng</small></h2>
+<h1 class="center">Bob Loblaw's Law Blog</h1>
+<h2 id="myself" class="center"><small>by Bob Loblaw</small></h2>
   <div class="small-title center"><h2><small>Most recent posts</small></h2></div>
 <div class="center">
   <% @articles.each do |article| %>
@@ -10,3 +10,7 @@
     </div>
   <% end %>
 </div>
+
+
+<%= link_to "Absolute", articles_url %>
+<%= link_to "Relative", articles_path %>

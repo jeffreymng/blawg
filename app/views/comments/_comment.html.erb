@@ -10,8 +10,21 @@
   </p>
 
   <p>
+    <%= link_to 'Comment-link-1', article_comment_path(@article, comment) %>
+  </p>
+
+  <p>
+    <%= link_to 'Comment-link-2', url_for([@article, comment]) %>
+  </p>
+
+    <p>
+    <%= link_to 'Comment-link-3', [@article, comment] %>
+  </p>
+
+  <p>
     <%= link_to 'Delete Comment', [comment.article, comment],
                  method: :delete,
                  data: { confirm: 'Are you sure?' } %>
   </p>
+
 </div>
